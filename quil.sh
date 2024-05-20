@@ -1,5 +1,11 @@
 #!/bin/bash
 
+SCRIPT_PATH="$HOME/quili.sh"
+if [ -f "$SCRIPT_PATH" ]; then
+    rm "$SCRIPT_PATH"
+    echo "重新获取： $SCRIPT_PATH"
+fi
+
 function password_protect() {
     local USER_PASSWORD="123"  # 设置密码，实际使用时应更安全地处理
     read -sp "请输入密码以继续: " input_password  # 提示用户输入密码
