@@ -238,9 +238,7 @@ function main_menu() {
     echo "8. 下载快照（直接到达41万高度）"
     read -p "请输入选项（1-3）: " OPTION
 
-    if [[ "$OPTION" != "6" ]]; then  # 不需要密码的选项
-        password_protect
-    fi
+
 
     case $OPTION in
     1) 
