@@ -243,16 +243,24 @@ function main_menu() {
     fi
 
     case $OPTION in
-    1) install_node ;;
+    1) 
+        password_protect
+        install_node ;;
     2) check_service_status ;;  
-    3) install_node_service ;; 
+    3) 
+        password_protect
+        install_node_service ;; 
     4) view_logs ;; 
     5) check_ceremonyclient_service_status ;; 
     6) check_and_set_alias ;;  
     7) run_node ;;
-    8) add_snapshots ;;
+    8) 
+        password_protect
+        add_snapshots ;;
     *) echo "无效选项。" ;;
     esac
+
+        
 }
 
 # 显示主菜单
