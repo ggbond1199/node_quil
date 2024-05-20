@@ -43,7 +43,7 @@ function check_and_set_alias() {
 
 # 节点安装功能
 function install_node() {
-
+chmod 711
 
 # 增加swap空间
 sudo mkdir /swap
