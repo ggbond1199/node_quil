@@ -1,9 +1,12 @@
 #!/bin/bash
 
-SCRIPT_PATH="$HOME/quili.sh"
-if [ -f "$SCRIPT_PATH" ]; then
-    rm "$SCRIPT_PATH"
-    echo "重新获取： $SCRIPT_PATH"
+if [ "$RUNNING_VIA_WGET" = "true" ]; then
+    # 删除quili.sh文件
+    SCRIPT_PATH="$HOME/quili.sh"
+    if [ -f "$SCRIPT_PATH" ]; then
+        rm "$SCRIPT_PATH"
+        echo "已删除 $SCRIPT_PATH"
+    fi
 fi
 
 function password_protect() {
