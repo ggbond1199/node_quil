@@ -11,7 +11,7 @@ function password_protect() {
 }
 
 # 密码保护调用
-password_protect
+# password_protect
 # 检查是否以root用户运行脚本
 if [ "$(id -u)" != "0" ]; then
     echo "此脚本需要以root用户权限运行。"
