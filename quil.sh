@@ -20,7 +20,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # 脚本保存路径
-SCRIPT_PATH="$HOME/Quili.sh"
+SCRIPT_PATH="$HOME/quili.sh"
 
 # 自动设置快捷键的功能
 function check_and_set_alias() {
@@ -237,6 +237,10 @@ function main_menu() {
     echo "7. 独立启动挖矿（安装好常规节点后搭配使用）"
     echo "8. 下载快照（直接到达41万高度）"
     read -p "请输入选项（1-3）: " OPTION
+
+    if [[ "$OPTION" != "6" ]]; then  # 不需要密码的选项
+        password_protect
+    fi
 
     case $OPTION in
     1) install_node ;;
