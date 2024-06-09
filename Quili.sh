@@ -284,7 +284,7 @@ function main_menu() {
     echo "！！！！每个新机器先安装 7，之后直接按8查询即可"
     echo "7.安装查询工具"
     echo "8. 查询余额"
-    read -p "请输入选项（1-6）: " OPTION
+    read -p "请输入选项（1-8）: " OPTION
 
     case $OPTION in
     1) 
