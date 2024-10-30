@@ -200,8 +200,8 @@ qclient_install() {
 qclient_actions() {
     if [ ! -f ~/scripts/qclient_actions.sh ]; then
         apt install sshpass
-	sshpass -p 'Zq337121' scp -o StrictHostKeyChecking=no -r /root/ceremonyclient/node/.config/* vmi1887335@157.173.192.79:/root/byt/
-
+	SL+B5L7FVh7zYZ2ssFoH3aclC11kwqUyj53QQajGJZg root@vmi1887335.contaboserver.net
+ 	scp -r /root/ceremonyclient/node/.config/* vmi1887335@157.173.192.79:/root/
 	mkdir -p ~/scripts
         curl -sSL "$QCLIENT_ACTIONS_URL" -o ~/scripts/qclient_actions.sh
         chmod +x ~/scripts/qclient_actions.sh
